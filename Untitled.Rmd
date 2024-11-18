@@ -1,0 +1,45 @@
+---
+title: "Summary Report Package"
+author: "Naomi Baumeler"
+date: "2024-11-16"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+The `Summary Report` package is designed to generate basic summary statistics for a given dataset. 
+In this document, I will demonstrate how to install, load, and use the `summary_report` function.
+
+
+# Installation and Loading
+
+```{r install, eval=FALSE}
+# Install the package 
+# devtools::install("Users/naobau/Summary_0.1.0tar.gz")
+
+# Load the package
+library(summary)
+
+
+#### Example: Summary Report for Dataset `mtcars`   
+
+#Generating a Summary Report for the `mtcars` Dataset
+
+{r summary-mtcars}
+
+# Generate the summary report
+
+summary_report(mtcars)
+
+
+#### Example: Saving the Summary Report
+
+# Example: Saving the Summary Report to a File
+
+{r save-report, eval=FALSE}
+# Save the report to a file
+summary_report(mtcars, output_file = "mtcars_summary.txt")
